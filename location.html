@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <title>복지시설 위치</title>
+</head>
+<style>
+      @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+      * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  #logo{
+    height:200px;
+    width:200px;
+    border-radius: 100%;
+    background-color: white;
+    float: left;
+    position:absolute;
+    left:150px;
+    top:30px;
+  }
+  #menu {
+    display: flex;
+
+    height: 960px;
+    width: 500px;
+    background-color: #FCD13A;
+    box-shadow:1px 1px 10px lightgray;
+  }
+  
+  #main {
+    position: relative;
+   
+    top: -960px;
+    width: 1400px;
+    height: 960px;
+    float: right;
+    
+  }
+  .buttons{
+    position:absolute;
+    margin: auto;
+    text-align: center;
+    top:300px;
+    left: 100px;
+    
+  }
+  .ui inverted button{
+    margin:auto;
+  }
+  .dropdown{
+    position:absolute;
+    top:250px;
+    left: 190px;}
+ 
+  }
+  .ui search dropdown{
+    width:500px;
+  }
+  #maplist{
+    width:400px;
+    height:500px;
+    background-color: white;
+    position:absolute;
+    top:400px;
+    left:50px;
+    text-align: center;
+    line-height: 550px;
+  }
+</style>
+<body>
+  <section id="logo">
+    <img src="노른자로고_2.gif">
+    </section>
+    <section id="menu">
+      <div class=buttons>
+      <div class="ui inverted segment">
+        <button class="ui inverted button">병원/약국</button>
+        <button class="ui inverted button">요양원</button>
+        <button class="ui inverted button"> 노인정 </button><br>
+        <button class="ui inverted button">노인대학</button>
+        <button class="ui inverted button">공공기관</button>
+        <button class="ui inverted button">초기화</button>
+       </div>
+      </div>
+      <div id="dropdown">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span id="choice">지역선택</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <p>강서구</p>
+                <p>구로구</p>
+                <p>금천구</p>
+                <p>양천구</p>
+                <p>영등포구</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div id="maplist">
+        <p>지도검색결과 리스트</p>
+    </div>
+    </section>
+    
+    <section id="main">
+      <div id="map" style="width:1400px;height:960px;"></div>
+
+    </section>
+    <script>
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<src="semantic/dist/semantic.min.js">
+<script src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=d960c2787007da86400c486fccedd2ee"></script>
+<script>
+  let mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+          center: new kakao.maps.LatLng(37.56675, 126.97935), // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+          mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+      }; 
+
+  // 지도를 생성한다 
+  let map = new kakao.maps.Map(mapContainer, mapOption); 
+
+  // 지도에 마커를 생성하고 표시한다
+  let marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.56675, 126.97935), // 마커의 좌표
+      draggable : true, // 마커를 드래그 가능하도록 설정한다
+      map: map // 마커를 표시할 지도 객체
+  });
+  </script>
+</body>
+</html>

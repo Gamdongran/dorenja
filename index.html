@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>노른자-복지내용 폼</title>
+</head>
+<style>
+  @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  #logo{
+    height:200px;
+    width:200px;
+    border-radius: 100%;
+    background-color: white;
+    float: left;
+    position:absolute;
+    left:150px;
+    top:30px;
+  }
+
+  #menu {
+    display: flex;
+
+    height: 960px;
+    width: 500px;
+    background-color: #FCD13A;
+    box-shadow:1px 1px 10px lightgray;
+  }
+
+  #medi {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: #ffffff;
+    left: 50px;
+    top: 300px;
+    text-align: center;
+    font: 35px black;
+    font-weight: bold;
+    line-height: 300px;
+    box-shadow:1px 1px 10px lightgray;
+  }
+
+  #culture {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: #ffffff;
+    left: 250px;
+    top: 300px;
+    text-align: center;
+    font: 35px black;
+    font-weight: bold;
+    line-height: 300px;
+    box-shadow:1px 1px 10px lightgray;
+  }
+
+  #financial {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: #ffffff;
+    left: 50px;
+    top: 600px;
+    text-align: center;
+    font:25px black;
+    font-weight: bold;
+    line-height: 300px;
+    box-shadow:1px 1px 10px lightgray;
+  }
+
+  #location {
+    position: absolute;
+    height: 300px;
+    width: 200px;
+    background-color: #ffffff;
+    left: 250px;
+    top: 600px;
+    text-align: center;
+    font: 25px black;
+    font-weight: bold;
+    line-height: 300px;
+    box-shadow:1px 1px 10px lightgray;
+  }
+
+  #dropdown {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    text-align: center;
+  }
+
+  .reset_btn{
+  position:relative;
+  top:250px;
+  left:360px;
+}
+
+  #main {
+    position: relative;
+   
+    top: -960px;
+    width: 1400px;
+    height: 960px;
+    float: right;
+    padding: 20px;
+  }
+
+.card{
+  display: inline-block;
+  width:350px;
+  height: 400px;
+  margin: 30px;
+  line-height: 120%;
+}
+.card-footer{
+  margin-top:60px;
+ 
+}
+
+</style>
+
+<body>
+  
+  <section id="menu">
+    <section id="logo">
+    <img src="노른자로고_2.gif">
+    </section>
+    <div id="menu_box">
+      <div id="medi">의료복지</div>
+      <div id="culture">문화교육</div>
+      <div id="financial">생활/금융지원</div>
+      <div id="location">복지시설위치</div>
+      <div id="dropdown">
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+              <span>지역선택</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <p>강서구</p>
+                <p>구로구</p>
+                <p>금천구</p>
+                <p>양천구</p>
+                <p>영등포구</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reset_btn">
+      <button class="ui inverted button">초기화</button>
+    </div>
+  </section>
+
+  <section id="main">
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+    <div  class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          노인 무릎인공 관절 수술 지원 사업
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>무릎관절수술 지원을 통해 노인 건강을<br> 
+            보장하고 의료비 부담을 경감합니다</p><br>
+          <p>문의처:02-6283-0268</p>
+          <p>지원주기:수시</p>
+          <p>제공유형:프로그램/서비스(서비스)</p>
+          <p>담당부처: 보건복지부 아동권리과</p>
+          
+         
+        </div>
+      </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">즐겨찾기</a>
+        <a href="#" class="card-footer-item">더보기</a>
+        <a href="#" class="card-footer-item">신청하기</a>
+      </footer>
+    </div>
+  </section>
+
+</body>
+
+</html>
