@@ -12,130 +12,124 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
-    <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-    integrity = "sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-    crossorigin = "anonymous" >
   </script>
-
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="location_style.css">
 </head>
 
 
 <body>
-
+  
   <div id="header">
     <img src="img/web_2.jpg">
   </div>
-
-  <section id=contents>
-    <div id="title">
-      <p id="service_title">복지시설 및 의료기관 위치정보</p>
-      <p id="sub-title">거주하는 구를 선택하여 복지시설과 의료기관 위치정보 확인 및 검색이 가능합니다.</p>
+ 
+ <section id=contents>
+  <div id ="title">
+    <p id="service_title">복지시설 및 의료기관 위치정보</p>
+    <p id="sub-title">거주하는 구를 선택하여 복지시설과 의료기관 위치정보 확인 및 검색이 가능합니다.</p>
+  </div>
+  
+ 
+ 
+  <div id="menu">
+ 
+    <div class=buttons>
+      <div class="ui inverted segment">
+        <button class="ui inverted button">병원/약국</button>
+        <button class="ui inverted button">요양원</button>
+        <button class="ui inverted button"> 노인정 </button>
+        <button class="ui inverted button">노인대학</button>
+        <button class="ui inverted button">공공기관</button>
+        <button class="ui inverted button">초기화</button>
+      </div>
     </div>
 
-
-
-    <div id="menu">
-
-      <div class=buttons>
-        <div class="ui inverted segment">
-          <button class="ui inverted button">병원/약국</button>
-          <button class="ui inverted button">요양원</button>
-          <button class="ui inverted button"> 노인정 </button>
-          <button class="ui inverted button">노인대학</button>
-          <button class="ui inverted button">공공기관</button>
-          <button class="ui inverted button">초기화</button>
+    <div id="dropdown">
+      <div class="dropdown is-hoverable">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <span id="choice">지역선택</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
         </div>
-      </div>
-
-      <div id="dropdown">
-        <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-              <span id="choice">지역선택</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-            <div class="dropdown-content">
-              <div class="dropdown-item">
-                <p>강서구</p>
-                <p>구로구</p>
-                <p>금천구</p>
-                <p>양천구</p>
-                <p>영등포구</p>
-              </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <p>강서구</p>
+              <p>구로구</p>
+              <p>금천구</p>
+              <p>양천구</p>
+              <p>영등포구</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div id="case">
+    <div id="case">
 
-        <div id="search-box">
-          <input type="search" placeholder="검색어를 입력해주세요">
-          <label class="icon">
-            <i class="fas fa-search"></i>
-          </label>
-        </div>
+      <div id="search-box">
+        <input type="search" placeholder="검색어를 입력해주세요">
+        <label class="icon">
+          <i class="fas fa-search"></i>
+        </label>
       </div>
-
-
-
     </div>
 
-    </div>
-    <div id="map">
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="true" aria-controls="collapseOne">
-              지도 결과 리스트
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div id="maplist">
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
-                <p>지도위치정보</p><br>
 
+ 
+ </div>
+  
+</div>
+<div id="map">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          지도 결과 리스트
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div id="maplist">
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           <p>지도위치정보</p><br>
+           
 
-              </div>
-            </div>
           </div>
         </div>
       </div>
-  </section>
-
-  <footer class="footer">
-    <div class="text">
-      <p>(03384) 서울시 은평구 은평로 195(녹번동) / 고유번호 : 111-83-00088 / 대표자 : 김미경</p>
-
-      <p>문의전화:02)351-6114(120 다산콜센터로 연결) / 02)351-6041~5(야간, 공휴일 / 당직실) FAX:02)351-5611</p>
-
-      <p>Copyright(C) Eunpyeong-gu Office All rights reserved.</p>
     </div>
-  </footer>
+</div>
+</section>
+
+<footer class="footer">
+  <div class="text">
+  <p>(03384) 서울시 은평구 은평로 195(녹번동) / 고유번호 : 111-83-00088 / 대표자 : 김미경</p>
+
+  <p>문의전화:02)351-6114(120 다산콜센터로 연결) / 02)351-6041~5(야간, 공휴일 / 당직실) FAX:02)351-5611</p>
+
+  <p>Copyright(C) Eunpyeong-gu Office All rights reserved.</p>
+</div>
+</footer>
 
 </body>
 
