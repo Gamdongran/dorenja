@@ -787,6 +787,8 @@ footer img {
         input[id*="district"]:checked+label+div{
             left:5%;
         }
+        input[id*="district"]+label+div { left:5%;}
+
 
         /* 지도결과리스트 */
         #accordionExample {
