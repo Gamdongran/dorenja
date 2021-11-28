@@ -19,9 +19,9 @@ body {
     width: 300px;
     position: relative;
     z-index: 9998;
-  }
-  
-  .wrapper .menu-btn {
+}
+
+.wrapper .menu-btn {
     position: fixed;
     left: 30px;
     top: 30px;
@@ -38,26 +38,26 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-  }
-  
-  #sidebar img {
+}
+
+#sidebar img {
     margin-left: 100px;
     width: 200px;
-  }
-  
-  #nav_btn:checked~.menu-btn {
-  
+}
+
+#nav_btn:checked~.menu-btn {
+
     background-color: coral;
-  
-  }
-  
-  .menu-btn i {
+
+}
+
+.menu-btn i {
     font-size: 40px;
-  }
-  
-  
-  
-  .home_btn svg {
+}
+
+
+
+.home_btn svg {
     position: fixed;
     bottom: 5%;
     right: 3%;
@@ -72,9 +72,9 @@ body {
     display: flex;
     cursor: pointer;
     justify-content: center;
-  }
-  
-  #sidebar {
+}
+
+#sidebar {
     position: fixed;
     background: #ffc944;
     height: 100%;
@@ -82,21 +82,21 @@ body {
     overflow: hidden;
     left: -25%;
     transition: all 0.3s ease;
-  }
-  
-  #nav_btn:checked~#sidebar {
+}
+
+#nav_btn:checked~#sidebar {
     left: 0;
-  }
-  
-  #sidebar .list-items {
+}
+
+#sidebar .list-items {
     position: relative;
     background: #ffc944;
     width: 100%;
     height: 100%;
     list-style: none;
-  }
-  
-  #login_btn {
+}
+
+#login_btn {
     margin-left: 20px;
     width: 65px;
     height: 50px;
@@ -110,34 +110,34 @@ body {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     outline: none;
-  }
-  
-  #login_btn:hover {
+}
+
+#login_btn:hover {
     background-color: #ffc944;
     box-shadow: 0px 15px 20px rgba(229, 186, 46, 0.4);
     color: #fff;
     transform: translateY(-7px);
-  }
-  
-  #sidebar .list-items li {
+}
+
+#sidebar .list-items li {
     font-size: 20px;
     font-weight: 700;
     padding-left: 45px;
     line-height: 45px;
     /* border-top: 1px solid rgba(255,255,255,0.1);
     transition: all 0.3s ease; */
-  }
-  
-  /* #sidebar .list-items li:hover{
+}
+
+/* #sidebar .list-items li:hover{
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     box-shadow: 0 0px 10px 3px #222;
   } */
-  #sidebar .list-items li:first-child {
+#sidebar .list-items li:first-child {
     border-top: none;
-  }
-  
-  #nav_search_box {
+}
+
+#nav_search_box {
     background-color: #fff;
     /* flex-wrap: wrap; */
     margin-left: 40px;
@@ -149,53 +149,54 @@ body {
     padding-left: 40px;
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-  
-  #nav_search_box a {
+}
+
+#nav_search_box a {
     margin-left: 10px;
     width: 100px;
-  }
-  
-  #nav_search_box::-webkit-scrollbar {
+}
+
+#nav_search_box::-webkit-scrollbar {
     width: 20px;
-  }
-  
-  #nav_search_box::-webkit-scrollbar-thumb {
+}
+
+#nav_search_box::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
-  }
-  
-  #nav_search_box::-webkit-scrollbar-track {
+}
+
+#nav_search_box::-webkit-scrollbar-track {
     background-color: #ffc944;
     border-radius: 10px;
     box-shadow: inset 0px 0px 7px #ffc944;
-  }
-  
-  #btn-list-items {
+}
+
+#btn-list-items {
     margin: 60px 50px 20px 165px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .list-items .icons a:first-child {
+}
+
+.list-items .icons a:first-child {
     margin-left: 0px;
-  }
-  
-  #nav-mainbtn {
+}
+
+#nav-mainbtn {
     margin-left: 30px;
     width: 260px;
     height: 260px;
-  }
-  
-  #nav-mainbtn .btn {
+}
+
+#nav-mainbtn .btn {
     font-weight: 700;
     font-size: 20px;
     width: 200px;
     height: 90px;
     margin: 0 0 10px -10px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
-  }
+}
+
 /* 헤더 시작*/
 #header {
     width: 80%;
@@ -210,7 +211,7 @@ body {
     position: relative;
     margin-bottom: 15px;
     margin-right: 10%;
-    top: 40%;
+    top: -10%;
 
 
 }
@@ -233,7 +234,7 @@ div ul :last-child {
 .main_menu {
 
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5%;
     font-weight: 600;
 }
@@ -263,7 +264,7 @@ div ul :last-child {
 #title img {
     width: 15%;
     position: relative;
-    top: 10px;
+    top: -2px;
     left: 10px;
 }
 
@@ -279,7 +280,7 @@ div ul :last-child {
     box-shadow: 1px 1px 10px lightgray;
     margin: 0 auto;
     margin-bottom: 20px;
-    
+
 
 
 }
@@ -374,19 +375,27 @@ label.icon {
 .buttons {
     position: relative;
     margin: auto;
-    width: 80%;
+    width: 40%;
     text-align: center;
-    right: -55%;
-    top: 30%;
+    left: 35%;
+    top: 20%;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 20px;
-
 }
 
-.ui inverted button {
-    margin: 10px;
+.btn{width: 100%;  margin:0 auto;}
+
+.btn li{
+   
+    width: 15%;
+    font-weight: 900;
+    font-size: 18px;
+    padding:0 5px;
+    text-align: center;
+  
 }
+
+
+
 
 /* 지역선택리스트 */
 
@@ -590,95 +599,224 @@ input[id*="answer01"]:checked+label+div {
     background-color: #fbf8ef;
 }
 
-footer img{ margin:0 auto; width: 100%;}
+footer img {
+    margin: 0 auto;
+    width: 100%;
+}
 
 
 
 /* ///////////////////태블릿미디어쿼리 ///////////*/
 @media screen and (max-width :769px) {
 
-    .logo {width: 15%;}
+    .logo {
+        width: 20%;
+        height: 60%;
+        top: 20%;
+        left:5%;
+    }
 
 
     /* 노른자 복지지도 타이틀 */
-    #title {padding: 8%}
+    #title {
+        padding: 8%
+    }
 
-    #service_title {width: 45%;font-size: 25px;}
+    #service_title {
+        width: 45%;
+        font-size: 25px;
+    }
 
-    #title img { width: 15%; }
+    #title img {
+        width: 15%;
+    }
 
 
     /* 검색창 */
-    #case {max-width: 70%;}
+    #case {
+        max-width: 70%;
+    }
 
     /* 기관선택 버튼 */
-    #menu {height: 100px;width: 90%;}
-    #map {width: 90%;}
- 
+    #menu {
+        height: 100px;
+        width: 90%;
+    }
+
+    #map {
+        width: 90%;
+    }
+
     .buttons {
         position: relative;
-        width: 60%;
+        width: 80%;
         left: 10%;
         top: 15%;
         font-weight: 400;
         font-size: 15px;
-        
+
     }
 
     /* 지역선택리스트 */
 
-    #district_options {left: 70%; top: -33%; width: 30%; font-size:15px;}
-
-    input[id*="district"]+label img {left: 75%;}
+    #district_options {
+        left: 70%;
+        top: -33%;
+        width: 30%;
+        font-size: 15px;
+    }
+    input[id*="district"]+label{
+        right: 15%;
+    }
+    input[id*="district"]+label img {
+        left: 60%;
+    }
+    input[id*="district"]+label+div {
+        right:30%;}
 
     /* 지도결과리스트 */
 
-    #accordionExample {top: -13%; width: 50%;}
-    
-    input[id*="answer01"]+label img {right: 10%;}
-    
-    
+    #accordionExample {
+        top: -13%;
+        width: 50%;
+    }
+    input[id*="answer01"]+label{
+        left: 15%;
+    }
+
+    input[id*="answer01"]+label img {
+        right: 35%;
+    }
+
+
     /* 푸터 */
-    .footer {margin-top: 5%;}
+    .footer {
+        margin-top: 5%;
+    }
 
 
     /* /////////모바일 미디어쿼리 ///////////////*/
     @media screen and (max-width :381px) {
 
-        .logo  { width: 30%;top:15%;margin:auto; }
-    
-    
+        .logo {
+            width: 40%;
+            top: 15%;
+            margin: auto;
+        }
+
+
+        .wrapper .menu-btn {
+            left: 10px;
+            top: 10px;
+            height: 50px;
+            width: 50px;
+        }
+
+
+
+
         /* 노른자 복지지도 타이틀 */
 
-        div ul li {margin-right: 10px;}
-        .main_menu {font-size: 13px;}
-        #title {padding: 10%;width:100%;}
-        #service_title {width: 60%;font-size: 20px;}
-    
-    
+        div ul li {
+            margin-right: 10px;
+        }
+
+        .main_menu {
+            font-size: 13px;
+            top: 30px;
+        }
+
+        #title {
+            padding: 10%;
+            width: 100%;
+        }
+
+        #service_title {
+            width: 60%;
+            font-size: 20px;
+        }
+
+
         /* 검색창 */
         #case {
             max-width: 80%;
-            margin-top:8%;
-            height:10%;
+            margin-top: 8%;
+            height: 10%;
         }
-    
+
         /* 기관선택 버튼 */
-        #menu {width: 95%;}
-     
-        .buttons {width: 90%;left: 4%;}
-    
+        #menu {
+            width: 95%;
+        }
+
+        .buttons {
+            width: 100%;
+            left: 4%;
+            top: 4%;
+        }
+
+        .btn li{ font-size: 15px; margin:13px;}
+
         /* 지역선택리스트 */
-        #map {width: 95%; height: 500px;}
-     
-        #district_options {left: 55%; top: -35%; width: 40%; font-size:15px;}
+        #map {
+            width: 95%;
+            height: 500px;
+            font-size: 18px;
+            top: -5px
+        }
+
+        #district_options {
+            left: 55%;
+            top: -35%;
+            width: 40%;
+            font-size: 10px;
+        }
+
+        input[id*="district"]+label {
+            font-size: 18px;
+            left: 10%;
+            top:5%;
+        }
+
+        input[id*="district"]+label img {
+            left: 85px;
+            top: 30px;
+            margin-left: 5px;
+        }
+
+        input[id*="district"]:checked+label+div{
+            left:5%;
+        }
 
         /* 지도결과리스트 */
-       #accordionExample {top: -15%; width: 50%;font-size:15px;}
-       input[id*="answer01"]+label+div {max-height: 0; width: 200%;}
-       input[id*="answer01"]:checked+label+div {max-height: 200px; width: 200%;}
-     
-       
-    
+        #accordionExample {
+            top: -15%;
+            right: 20px;
+            width: 50%;
+        }
+
+        input[id*="answer01"]+label {
+            font-size: 18px;
+            left:5%;
+            top:5%;
+        }
+
+        input[id*="answer01"]+label img {
+            top: 30px;
+            left: 80%
+        }
+
+        input[id*="answer01"]+label+div {
+            max-height: 0;
+            width: 200%;
+        }
+
+        input[id*="answer01"]:checked+label+div {
+            max-height: 200px;
+            width: 200%;
+        }
+
+
+
     }
 }
