@@ -1,0 +1,218 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+#logo {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background-color: white;
+    float: left;
+    position: absolute;
+    left: 150px;
+    top: 30px;
+}
+
+#menu {
+    display: flex;
+    height: 960px;
+    width: 500px;
+    background-color: #FCD13A;
+    box-shadow: 1px 1px 10px lightgray;
+}
+
+.map {
+    position: relative;
+
+    top: -960px;
+    width: auto;
+    height: 960px;
+    left:500px;
+    border:1px solid red;
+
+}
+
+
+.buttons {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 300px;
+    left: 100px;
+
+}
+
+.ui inverted button {
+    margin: auto;
+}
+
+.dropdown {
+    position: absolute;
+    top: 250px;
+    left: 190px;
+}
+
+
+.ui search dropdown {
+    width: 500px;
+}
+
+#maplist {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 400px;
+    left: 50px;
+    text-align: center;
+    line-height: 550px;
+}
+
+/* 태블릿미디어쿼리 */
+@media screen and (max-width :768px) {
+
+    #logo {
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        background-color: white;
+        float: left;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+    #menu {
+        display: flex;
+        height: 250px;
+        width: 768px;
+        background-color: #FCD13A;
+        box-shadow: 1px 1px 10px lightgray;
+    }
+
+    .map {
+      
+        position: relative;
+        border: 1px solid red;
+        width: 768px;
+        height: 350px;
+        top: 300px;
+        left:0px;
+        text-align: center;
+        line-height: 200px;
+    }
+
+   
+
+    .buttons {
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: 60px;
+        left: 330px;
+
+    }
+
+    .ui inverted button {
+        margin: auto;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 170px;
+        left: 400px;
+    }
+
+
+    .ui search dropdown {
+        width: 500px;
+    }
+
+    #maplist {
+        width: 768px;
+        height: 300px;
+        background-color: white;
+        border: 1px solid black;
+        position: absolute;
+        top: 250px;
+        left:0px;
+        text-align: center;
+        line-height: 200px;
+    }
+
+  
+}
+
+
+
+@media screen and (max-width :381px) {
+    #logo{
+    width:0px;
+    height: 0px;
+    }
+
+    #menu {
+        display: flex;
+        height: 170px;
+        width: 381px;
+        background-color: #FCD13A;
+        box-shadow: 1px 1px 10px lightgray;
+    }
+
+    .map {
+        position: absolute;
+        border: 1px solid red;
+        width: 381px;
+        height: 350px;
+        top: 370px;
+        text-align: center;
+        line-height: 200px;
+       
+    }
+
+    
+
+    .buttons {
+        position: absolute;
+        margin: auto;
+        text-align: center;
+        top: 15px;
+        left: 40px;
+
+    }
+
+    .ui inverted button {
+        margin: auto;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 120px;
+        left: 140px;
+    }
+
+
+    .ui search dropdown {
+        width: 500px;
+    }
+
+    #maplist {
+        width: 381px;
+        height: 200px;
+
+        border: 1px solid black;
+        position: absolute;
+        top: 170px;
+        text-align: center;
+        line-height: 200px;
+    }
+
+    .map {
+  
+    }
+}
