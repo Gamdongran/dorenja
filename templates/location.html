@@ -135,7 +135,7 @@
 
 <!-- 로고& 네비게이션 메뉴 -->
   <div id="header">
-    <img class="logo" src="../static/img/노른자logo_2.png">
+    <img class="logo" src="../static/img/노른자logo_2.png">
     <ul class="main_menu">
       <li>About</li>
       <li>생활복지</li>
@@ -178,19 +178,87 @@
 
 
 
+  <!-- 지도영역 시작  -->
 
-  <!-- 지도영역 시작(지역선택버튼/ 지도결과 리스트 포함)  -->
-    <div id="map">
-      <div id="maplist">
-      </div>
-    </section>
-  
-    <section id="main">
-      <div class=map>
-        <p style="margin-top:0px">
+<section id="main">
+       <!-- 지도결과 리스트 아코디언메뉴 -->
+
+ <div id="accordionExample">
+  <input type="checkbox" id="answer01">
+  <label for="answer01">지도 결과 리스트<img></img></label>
+  <div class="maplist">
+    <div class=location_card>
+      <p>윰제이포도밭</p>
+      <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
+      <p>041-123-4567</p>
+    </div>
+    <div class=location_card>
+      <p>윰제이포도밭</p>
+      <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
+      <p>041-123-4567</p>
+    </div>
+    <div class=location_card>
+      <p>윰제이포도밭</p>
+      <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
+      <p>041-123-4567</p>
+    </div>
+    <div class=location_card>
+      <p>윰제이포도밭</p>
+      <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
+      <p>041-123-4567</p>
+    </div>
+    <div class=location_card>
+      <p>윰제이포도밭</p>
+      <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
+      <p>041-123-4567</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- 지역선택 아코디언 메뉴 -->
+
+<div id="district_options">
+  <input type="checkbox"  id="district">
+  <label for="district">지역선택<img></img></label>
+ <div class="district_list">
+     <p>강남구</p>
+     <p>강동구</p>
+     <p>강북구</p>
+     <p>강서구</p>
+     <p>관악구</p>
+     <p>광진구</p>
+     <p>구로구</p>
+     <p>금천구</p>
+     <p>노원구</p>
+     <p>도봉구</p>
+     <p>동대문구</p>
+     <p>동작구</p>
+     <p>마포구</p>
+     <p>서대문구</p>
+     <p>서초구</p>
+     <p>성동구</p>
+     <p>성북구</p>
+     <p>송파구</p>
+     <p>양천구</p>
+     <p>영등포구</p>
+     <p>용산구</p>
+     <p>은평구</p>
+     <p>종로구</p>
+     <p>중구</p>
+     <p>중랑구</p>
+   </div>
+    </div>
+</div>
+
+
+      
+     
+        <div id="map">    
+          <p style="margin-top:0px">
           <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
         </p>
-        <div id="map" style="width:100%;height:100%;"></div>
+      </div>
         <script type="text/javascript"
           src="//dapi.kakao.com/v2/maps/sdk.js?appkey=35dde2f296a97b5ad171e7beb3bfb02c"></script>
         <script>
@@ -304,78 +372,9 @@
             map.setCenter(locPosition);
           }
         </script>
-      </div>
-  
-     <!-- 지도결과 리스트 아코디언메뉴 -->
-
-      <div id="accordionExample">
-        <input type="checkbox" id="answer01">
-        <label for="answer01">지도 결과 리스트<img></img></label>
-        <div class="maplist">
-          <div class=location_card>
-            <p>윰제이포도밭</p>
-            <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
-            <p>041-123-4567</p>
-          </div>
-          <div class=location_card>
-            <p>윰제이포도밭</p>
-            <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
-            <p>041-123-4567</p>
-          </div>
-          <div class=location_card>
-            <p>윰제이포도밭</p>
-            <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
-            <p>041-123-4567</p>
-          </div>
-          <div class=location_card>
-            <p>윰제이포도밭</p>
-            <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
-            <p>041-123-4567</p>
-          </div>
-          <div class=location_card>
-            <p>윰제이포도밭</p>
-            <p>충청남도 천안이 어쩌고자쩌고 123-1234</p>
-            <p>041-123-4567</p>
-          </div>
-        </div>
-      </div>
-
-
-     <!-- 지역선택 아코디언 메뉴 -->
-
-      <div id="district_options">
-        <input type="checkbox"  id="district">
-        <label for="district">지역선택<img></img></label>
-       <div class="district_list">
-           <p>강남구</p>
-           <p>강동구</p>
-           <p>강북구</p>
-           <p>강서구</p>
-           <p>관악구</p>
-           <p>광진구</p>
-           <p>구로구</p>
-           <p>금천구</p>
-           <p>노원구</p>
-           <p>도봉구</p>
-           <p>동대문구</p>
-           <p>동작구</p>
-           <p>마포구</p>
-           <p>서대문구</p>
-           <p>서초구</p>
-           <p>성동구</p>
-           <p>성북구</p>
-           <p>송파구</p>
-           <p>양천구</p>
-           <p>영등포구</p>
-           <p>용산구</p>
-           <p>은평구</p>
-           <p>종로구</p>
-           <p>중구</p>
-           <p>중랑구</p>
-         </div>
-          </div>
-    </div>
-</section>
+      
+</section> 
+     
 
 <!-- 푸터이미지 -->
   <footer class="footer">
