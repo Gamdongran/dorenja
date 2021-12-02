@@ -26,7 +26,7 @@ body {
   
   .wrapper .menu-btn {
     position: fixed;
-    right: 30px;
+    left: 30px;
     top: 30px;
     background:nene;
     color: #5a4001;
@@ -48,6 +48,7 @@ body {
   
   #nav_btn:checked~.menu-btn {
     color: #ffc944;
+    left: 500px;
   }
   
   .menu-btn i {
@@ -367,13 +368,15 @@ label.icon {
 
 /* 지도, 지도결과리스트, 지역선택, 기관선택메뉴 */
 #map {
+    display: flex;
     position: relative;
     width: 80%;
-    height: 600px;
+    height: 900px;
     background-color: #eae8e4;
     margin: 0 auto;
-
 }
+
+#map p{width: 100%;}
 
 /* 기관선택 버튼 */
 .buttons {
@@ -407,9 +410,10 @@ label.icon {
 /* 지역선택리스트 */
 
 #district_options {
-    position: relative;
-    left: 35%;
-    top: -34%;
+    position:relative;
+    display: inline-block;
+    top:-105px;
+    left: 250px;
     width: 15%;
     height: 20%;
 }
@@ -419,24 +423,22 @@ input[id*="district"] {
 }
 
 input[id*="district"]+label {
-    display: block;
+   
     padding: 15px;
     border-bottom: 0;
     color: #5a4001;
     font-weight: 900;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     font-size: 20px;
-
-
-}
+    text-align: center;}
 
 
 
 input[id*="district"]+label img {
     position: absolute;
-    top: 50%;
-    right: 0px;
+    left: 250px;
+    top:30px;
     width: 30px;
     height: 30px;
     margin-top: -15px;
@@ -448,12 +450,15 @@ input[id*="district"]+label img {
 
 input[id*="district"]+label+div {
     max-height: 0px;
+    width:100%;
     transition: all .35s;
     overflow: hidden;
     font-size: 20px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top:68px;
     background-color: white;
+    z-index: 1;
 
 
 }
@@ -466,6 +471,8 @@ input[id*="district"]:checked+label img {
 input[id*="district"]:checked+label+div {
     max-height: 200px;
     width: 100%;
+    position:absolute;
+    top:68px;
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
@@ -505,10 +512,11 @@ input[id*="district"]+label+div p {
 
 #accordionExample {
     position: relative;
-    left: 3%;
-    top: -14%;
+    display: inline-block;
     width: 30%;
     height: 20%;
+    left:250px;
+    top:-105px;
 }
 
 input[id*="answer01"] {
@@ -516,28 +524,26 @@ input[id*="answer01"] {
 }
 
 input[id*="answer01"]+label {
-    display: block;
+    display: inline-block;
     padding: 15px;
     border-bottom: 0;
     color: #5a4001;
     font-weight: 900;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     font-size: 20px;
-
-
-}
+   }
 
 
 
 input[id*="answer01"]+label img {
     position: absolute;
-    top: 50%;
-    right: 10px;
+    top: 30%;
+    left: 490px;
     width: 30px;
     height: 30px;
-    margin-top: -15px;
-    display: inline-block;
+   
+    display:flex;
     background: url('./img/down.png') 0 0 no-repeat;
 }
 
@@ -548,13 +554,15 @@ input[id*="answer01"]:checked+label img {
 
 input[id*="answer01"]+label+div {
     max-height: 0;
+    width: 100%;
     transition: all .35s;
     overflow: hidden;
     font-size: 11px;
     text-align: center;
-    position: relative;
-    top: 30%;
-    right: 3%;
+    position: absolute;
+    top: 68px;
+    left:-50px;
+    z-index: 1;
 }
 
 
@@ -564,6 +572,10 @@ input[id*="answer01"]:checked+label+div {
     text-align: center;
     overflow-y: auto;
     overflow-x: hidden;
+    position: absolute;
+    top: 68px;
+    left:-50px;
+    z-index: 1;
 
 
 }
@@ -602,7 +614,9 @@ input[id*="answer01"]:checked+label+div {
 
 /* 푸터 */
 .footer {
-    margin-top: 10%;
+    width:100%;
+    
+    
     background-color: #fbf8ef;
 }
 
@@ -610,6 +624,20 @@ footer img {
     margin: 0 auto;
     width: 100%;
 }
+
+/* @media (max-width: 1280px)
+{
+    /* 지역선택리스트 */
+
+/* #district_options {left: 10%;}
+input[id*="district"]+label img {left:150% ;} */
+
+/* 지도결과리스트 */
+
+/* 
+#accordionExample {left:150px;}
+
+input[id*="answer01"]+label img {left: 305px;}} */ 
 
 
 
@@ -666,42 +694,40 @@ footer img {
 
     /* 지역선택리스트 */
 
-    #district_options {
-        left: 70%;
-        top: -33%;
-        width: 30%;
-        font-size: 15px;
+    #district_options { top:-100px; left: 20px;}
+  
+    
+    input[id*="district"]+label { width:100%;}
+    
+    input[id*="district"]+label+div {width: 280px;}
+    
+    input[id*="district"]:checked+label+div {width: 280px;}
+    
+    .district_list::-webkit-scrollbar {
+        width: 10px;
     }
-    input[id*="district"]+label{
-        right: 15%;
-    }
-    input[id*="district"]+label img {
-        left: 60%;
-    }
-    input[id*="district"]+label+div {
-        right:30%;}
+    
+  
 
     /* 지도결과리스트 */
 
     #accordionExample {
-        top: -13%;
-        width: 50%;
+      
+        width: 40%;
+        height: 20%;
+        left:70px;
+        top:-100px;
     }
-    input[id*="answer01"]+label{
-        left: 15%;
-    }
-
-    input[id*="answer01"]+label img {
-        right: 35%;
-    }
-
-
+    
+    input[id*="answer01"]+label img {left: 230px;}
+    
+    
     /* 푸터 */
     .footer {
         margin-top: 5%;
     }
 
-
+    
     /* /////////모바일 미디어쿼리 ///////////////*/
     @media screen and (max-width :381px) {
 
@@ -773,59 +799,38 @@ footer img {
         }
 
         #district_options {
-            left: 55%;
-            top: -35%;
-            width: 40%;
-            font-size: 10px;
+            top:-95px;
+            left: 20px;
+            width: 30%;
         }
+     
+        input[id*="district"]+label {font-size: 18px;}
+   
 
-        input[id*="district"]+label {
-            font-size: 18px;
-            left: 10%;
-            top:5%;
+        input[id*="district"]+label img {left: 115px; top:30px;}
+        
+        
+        input[id*="district"]+label+div { width: 135%;}
+      
+        input[id*="district"]:checked+label+div {width: 135%;}
+        
+        .district_list::-webkit-scrollbar {
+            width: 10px;
         }
-
-        input[id*="district"]+label img {
-            left: 85px;
-            top: 30px;
-            margin-left: 5px;
-        }
-
-        input[id*="district"]:checked+label+div{
-            left:5%;
-        }
-        input[id*="district"]+label+div { left:5%;}
-
-
+        
+   
+        
         /* 지도결과리스트 */
-        #accordionExample {
-            top: -15%;
-            right: 20px;
-            width: 50%;
-        }
-
-        input[id*="answer01"]+label {
-            font-size: 18px;
-            left:5%;
-            top:5%;
-        }
-
-        input[id*="answer01"]+label img {
-            top: 30px;
-            left: 80%
-        }
-
-        input[id*="answer01"]+label+div {
-            max-height: 0;
-            width: 200%;
-        }
-
-        input[id*="answer01"]:checked+label+div {
-            max-height: 200px;
-            width: 200%;
-        }
-
-
+        
+        
+        #accordionExample {width: 50%; left:20px; top:-95px;}
+        input[id*="answer01"]+label {font-size: 18px;}
+        input[id*="answer01"]+label img {left: 160px;}
+        input[id*="answer01"]:checked+label img{left: 160px;}
+        input[id*="answer01"]+label+div {width: 200%; left: -30px;}
+        input[id*="answer01"]:checked+label+div {width: 200%; left:-30px;}
+      
+      
 
     }
 }
