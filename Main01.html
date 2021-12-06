@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="ko" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <!---<title>Animated Sidebar Menu | CodingLab</title>--->
+    <link rel="stylesheet" href="main_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    <!-- <script type="text/javascript" src="&lt;/script'&gt;http://code.jquery.com/jquery-latest.js"></script>  -->
+
+    <script>
+        //     $(document).ready(function () {
+        //       showArticles();
+        //     });
+        // 
+
+        function go_map(){
+            window.location.href = '/location'
+        }
+        function sign_out() {
+                $.removeCookie('mytoken', { path: '/' });
+                alert('로그아웃!');
+                window.location.href = "/login";
+            };
+
+        function openClose() {
+            if ($("#list-items").css("display") == "block") {
+                $("#list-items").hide();
+                $("#btn-list-items").text("개인정보 열기");
+            } else {
+                $("#list-items").show();
+                $("#btn-list-items").text("개인정보 닫기");
+            }
+        }
+
+
+        function fnMove(seq) {
+            var offset = $("#div" + seq).offset();
+            $('html, body').animate({
+                scrollTop: offset.top - 60 /*스크롤된 위치에서 상단네비 길이만큼 -60*/
+            }, 400 /*스크롤시간*/ );
+        }
+        $(document).ready(function(){
+            var target = $("#sidebar");
+ 
+            // 버튼을 클릭하면 사이드바 열림
+            $(document).on("click", "#OpenBtn", function (e){
+                target.show();
+                target.addClass('emphasized');
+            });
+ 
+            // 사이드바 외부를 클릭하면 사이드바 닫힘
+            $(document).mouseup(function (e){
+                if(target.has(e.target).length==0) {
+                    target.hide();
+                    target.removeClass('emphasized');
+                } 
+            });
+        });;
+
+        
+    </script>
+</head>
+
+<body>
+    <!-- <button onClick="fnMove('3')" class="btn btn-outline-light">여가</button> -->
+    <div onclick="fnMove('4')" class="home_btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill"
+            viewBox="0 0 16 16">
+            <path
+                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+        </svg></div>
+    <!--홈버튼 플로팅버튼-->
+    
+        <div class="wrapper">
+            <input type="checkbox" id="nav_btn" hidden>
+            <label for="nav_btn" class="menu-btn" id="OpenBtn">
+                <i class="fas fa-user"></i>
+
+
+                <!-- <i class="fas fa-times"></i> -->
+            </label>
+        
+            <nav id="sidebar">
+                <!-- <div class="title"><img src=imge/logo_02.gif></div> -->
+    
+                <button onclick="openClose()" id="btn-list-items" type="button" class="btn btn-info">개인정보 열기</button>
+    
+                <ul class="list-items" id="list-items" style="display:none">
+                    <li>
+                        로그인이 필요한 페이지 입니다
+                    </li>
+                    <li>
+                        <button>로그인하기 ></button>
+                    </li>
+                    <img src="img/side_img.gif">
+                </ul>
+                <div id="nav-mainbtn">
+                    <button onClick="fnMove('1')" class="btn btn-outline-light">생활복지</button>
+                    <button onClick="fnMove('3')" class="btn btn-outline-light">의료복지</button>
+                    <button onClick="fnMove('2')" class="btn btn-outline-light">문화/여가</button>
+                    <button class="btn btn-outline-light">복지지도<a class="fas fa-map-marker-alt"></a></button>
+                </div>
+            </nav>
+        
+    </div>
+    <!-- /////여기부터메인입니다///// -->
+    
+        <div id="header" >
+            <div class="setting" id="div4">
+                <img src="img/노른자logo_2.png">
+                <lu>
+                    <li><a  onClick="fnMove('1')">생활 복지</a></li>
+                    <li><a  onClick="fnMove('3')">의료 복지</a></li>
+                    <li><a  onClick="fnMove('2')">문화/여기</a></li>
+                    <li><a herf="#">복지 지도</a></li>
+                    <li><a herf="#">About</a></li>
+                </lu>
+            </div>
+        </div>
+        <div id="main">
+            <!--검색창부터 카드까지 영역--->
+            <div id="case">
+
+                <div id="search-box">
+                    <input type="search" placeholder="검색어를 입력해주세요">
+                    <label class="icon">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div id="ad_wrap">
+        <!-----슬라이드 시작 -->
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <input type="radio" name="slide" id="slide04">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <a>
+                        <label for="slide04" class="prev"></label>
+                        <img src="img/slide01.png">
+                        <label for="slide02" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        <label for="slide01" class="prev"></label>
+                        <img src="img/slide02.png">
+                        <label for="slide03" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        <label for="slide02" class="prev"></label>
+                        <img src="img/slide03.png">
+                        <label for="slide04" class="next"></label>
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        <label for="slide04" class="prev"></label>
+                        <img src="img/slide04.png">
+                        <label for="slide01" class="next"></label>
+                    </a>
+                </li>
+                    
+                    <div class="contentment">
+                        <button type="button" id="life_btn" onClick="fnMove('1')" class="btn">
+                            <i class="bi bi-person-badge-fill"></i>
+                            <p class="btn_name">생활복지</p>
+                            <p class="btn_exp">생활 도움 정보
+                        </button>
+                        <button type="button" id="hos_btn" onClick="fnMove('3')" class="btn">
+                            <i class="bi bi-suit-heart-fill"></i>
+                            <p class="btn_name">의료복지</p>
+                            <p class="btn_exp">의료회관정보
+                        </button>
+                        <button type="button" id="cul_btn" onClick="fnMove('2')" class="btn">
+                            <i class="bi bi-calendar2-check-fill"></i>
+                            <p class="btn_name">문화/여가</p>
+                            <p class="btn_exp">문화,여가정보
+                        </button>
+                        <button type="button" id="map_btn" class="btn" onclick="go_map()">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p class="btn_name">복지지도</p>
+                            <p class="btn_exp">내주위 복지 정보
+                        </button>
+                </div>
+            </ul>       
+        </div>
+        <section id="row01" class="row" style="display: none;">
+            <h2>검색결과 보기 </h2>
+            <div class="contents">
+                <div class="cards">
+                    <div class="card_header">
+                        <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                        <div id="hide">
+                            <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                            <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                지원대상자<br>
+                                65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                /국가유공자 : 보훈지청에서 발급</p>
+                        </div>
+                    </div>
+                    <footer class="card_footer">
+                        <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                        <a href="#" class="card-footer-item">전화번호</a>
+                        <a href="#" class="card-footer-item">지도</a>
+                    </footer>
+                </div>
+            </div>
+
+        </section>
+        <section id="row02" class="row">     
+                
+            <h2>노른자 정보 한눈에 보기</h2>
+                   
+                    <div class="contents">
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                    </div>    
+        </section>   
+
+
+    <!-- 여기서부터 본격적인 복지 정보들  -->
+
+  
+        <!---생활복지 -->
+       
+        <section id="div1" class="row">
+             
+            <div id="B_title">
+                <h2>생활복지</h2>
+                
+                <div class="btn_line">
+
+                    <!---지역선택 드롭박스-->
+                    <div class="dropdown">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                    <span id="DR_name">지역선택</span>
+
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <a href="#">강서구</a>
+                                        <a href="#">구로구</a>
+                                        <a href="#">금천구</a>
+                                        <a href="#">양천구</a>
+                                        <a href="#">영등포구</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---초기화 버튼-->
+                    <div class="reset_btn">
+                        <button class="ui inverted button">초기화</button>
+                    </div>
+                </div>
+            </div>
+                <h5>생활에 도움이 되는 복지 정보를 넣어요</h5>
+                    <!---생활복지 카드 내용-->
+                    <div class="contents">
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+                        <div class="cards">
+                            <div class="card_header">
+                                <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                                <div id="hide">
+                                    <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                    <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                        지원대상자<br>
+                                        65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                        동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                        /국가유공자 : 보훈지청에서 발급</p>
+                                </div>
+                            </div>
+                            <footer class="card_footer">
+                                <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                                <a href="#" class="card-footer-item">전화번호</a>
+                                <a href="#" class="card-footer-item">지도</a>
+                            </footer>
+                        </div>
+
+
+                    </div>
+               
+        </section>
+
+
+    <!---의료복지-->
+    <section id="div3" class="row">
+        <div id="B_title">
+            <h2>의료복지</h2>
+            
+            <div class="btn_line">
+
+                <!---지역선택 드롭박스-->
+                <div class="dropdown">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span id="DR_name">지역선택</span>
+
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <a href="#">강서구</a>
+                                    <a href="#">구로구</a>
+                                    <a href="#">금천구</a>
+                                    <a href="#">양천구</a>
+                                    <a href="#">영등포구</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---초기화 버튼-->
+                <div class="reset_btn">
+                    <button class="ui inverted button">초기화</button>
+                </div>
+            </div>
+        </div>
+            <h5>의료 복지 정보 모음입니다.</h5>
+                <!---생활복지 카드 내용-->
+                <div class="contents">
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+
+
+                </div>
+           
+    </section>
+      
+  
+    
+    <!---여가/문화복지 헤더-->
+    <section id="div2" class="row">
+        <div id="B_title">
+            <h2>문화/여가</h2>
+            
+            <div class="btn_line">
+
+                <!---지역선택 드롭박스-->
+                <div class="dropdown">
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span id="DR_name">지역선택</span>
+
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <a href="#">강서구</a>
+                                    <a href="#">구로구</a>
+                                    <a href="#">금천구</a>
+                                    <a href="#">양천구</a>
+                                    <a href="#">영등포구</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---초기화 버튼-->
+                <div class="reset_btn">
+                    <button class="ui inverted button">초기화</button>
+                </div>
+            </div>
+        </div>
+            <h5>광공서에서 즐길수 있는 여러 여기활동 안내</h5>
+                <!---생활복지 카드 내용-->
+                <div class="contents">
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+                    <div class="cards">
+                        <div class="card_header">
+                            <div class="main_view">복지</div><span id="gu_name">성북구</span>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">지하철 무임용 교통카드 발급,신청</h6>
+                            <div id="hide">
+                                <p class="card-text">구비서류 : 신청서, 신분증, 신용/체크카드 신청시 통장사본</p>
+                                <p>발급대상 : 서울시 거주 만65세이상자(재외국민의 경우 서울시를 거소지로 신고한 만65세 이상 영주권자(F-5)), 장애인, 국가유공자중 수송시설 이용
+                                    지원대상자<br>
+                                    65세이상자 : 신용/체크카드 발급 - 신한은행 전 영업소, 단순무임카드 발급 - 서울시 모든 동주민센터//장애인 : 신용/체크카드 - 관할 주민등록주소지
+                                    동주민센터, 단순무임카드 발급 - 서울시 모든 동주민센터<br>
+                                    /국가유공자 : 보훈지청에서 발급</p>
+                            </div>
+                        </div>
+                        <footer class="card_footer">
+                            <a href="#" class="card-footer-item" target="blank">홈페이지</a>
+                            <a href="#" class="card-footer-item">전화번호</a>
+                            <a href="#" class="card-footer-item">지도</a>
+                        </footer>
+                    </div>
+
+
+                </div>
+
+    </section>
+    </div>
+
+    <div id="footer">
+        <img src="img/footer_egg2.png">
+    </div>
+</body>
+
+</html>
