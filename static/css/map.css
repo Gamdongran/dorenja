@@ -1,0 +1,316 @@
+#title {
+  height: 10%;
+  width: 80%;
+  padding: 3%;
+  margin: 0 auto;
+  display: block;
+
+
+}
+
+#service_title {
+  width: 30%;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 auto;
+  color: #5a4001;
+  text-align: center;
+}
+
+#title img {
+  width: 15%;
+  position: relative;
+  top: -2px;
+  left: 10px;
+}
+
+/* 기관선택버튼, 지도결과리스트, 지역선택 메뉴바 */
+
+#menu {
+
+  height: 70px;
+  width: 80%;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px lightgray;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+
+
+
+}
+
+#map {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  height: 900px;
+  background-color: #eae8e4;
+  left: 10%;
+
+}
+
+#map p {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  margin-top: 0px;
+}
+
+/* 기관선택 버튼 */
+.buttons {
+  position: relative;
+  width: 30%;
+  text-align: center;
+  left: 62%;
+  top: 30%;
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+}
+
+.btns li {
+
+
+  font-weight: 900;
+  font-size: 18px;
+  background-color: white;
+  text-align: center;
+  vertical-align: middle;
+
+
+}
+
+
+
+
+/* 지역선택리스트 */
+
+
+#district_options {
+  position: relative;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 15%;
+  top: -135px;
+  background-color: white;
+  left: 40%;
+}
+
+input[id*="district"] {
+  display: none;
+}
+
+input[id*="district"]+label {
+
+  padding: 15px;
+  border-bottom: 0;
+  color: #5a4001;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  background-color:white;
+  font-size: 20px;
+ 
+  text-align: center;
+}
+
+
+
+input[id*="district"]+label img {
+  position: absolute;
+  left: 100px;
+  top: 31px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  display: inline-block;
+  background: url('./img/down.png') 0 0 no-repeat;
+
+}
+
+
+input[id*="district"]+label+div {
+  max-height: 0px;
+  width: 100%;
+  transition: all .35s;
+  overflow: hidden;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  top: 68px;
+  background-color: white;
+  z-index: 1;
+
+
+}
+
+input[id*="district"]:checked+label img {
+  background: url('./img/up.png') 0 0 no-repeat;
+
+}
+
+input[id*="district"]:checked+label+div {
+  max-height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 68px;
+
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.district_list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.district_list::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.district_list::-webkit-scrollbar-track {
+  background-color: #5a4001;
+  border-radius: 5px;
+
+}
+
+
+input[id*="district"]+label+div p {
+  border: solid 1px #5a4001;
+  font-weight: bold;
+  margin: 15px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+/* 지도결과리스트 */
+
+
+#accordionExample {
+  position: relative;
+  display: flex;
+  width: 30%;
+  height: 50px;
+  justify-content: center;
+  top: -85px;
+  left: 10%;
+  background-color: white;
+
+
+}
+
+input[id*="answer01"] {
+  display: none;
+}
+
+input[id*="answer01"]+label {
+  display: inline-block;
+  padding: 15px;
+  border-bottom: 0;
+  color: #5a4001;
+  font-weight: 900;
+  cursor: pointer;
+  position: absolute;
+  font-size: 20px;
+  background-color: white;
+
+}
+
+
+
+input[id*="answer01"]+label img {
+  position: absolute;
+  top: 25%;
+  left: 160px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  background: url('./img/down.png') 0 0 no-repeat;
+}
+
+input[id*="answer01"]:checked+label img {
+  background: url('./img/up.png') 0 0 no-repeat;
+
+}
+
+input[id*="answer01"]+label+div {
+  max-height: 0;
+  width: 100%;
+  transition: all .35s;
+  overflow: hidden;
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 68px;
+  background-color: white;
+  z-index: 2;
+}
+
+
+input[id*="answer01"]:checked+label+div {
+  max-height: 300px;
+  width: 100%;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 68px;
+  background-color: white;
+  z-index: 2;
+
+
+}
+
+.maplist::-webkit-scrollbar {
+  width: 15px;
+}
+
+.maplist::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.maplist::-webkit-scrollbar-track {
+  background-color: #5a4001;
+  border-radius: 10px;
+
+}
+
+
+.location_card {
+  display: block;
+  width: 80%;
+  background-color: #5a4001;
+  border-radius: 10px;
+  color: white;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.location_card p {
+  background-color: #5a4001;
+  color: white;
+}

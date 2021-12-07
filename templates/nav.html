@@ -1,0 +1,49 @@
+  <!-- <button onClick="fnMove('3')" class="btn btn-outline-light">여가</button> -->
+  <div onclick="fnMove('4')" class="home_btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+      </svg>
+  </div>
+  <!--홈버튼 플로팅버튼-->
+  
+  <div class="wrapper">
+    <input type="checkbox" id="nav_btn" hidden>
+    <label for="nav_btn" class="menu-btn" id="OpenBtn">
+        <i class="fas fa-user" id="OpenBtn"></i>
+
+
+    <!-- <i class="fas fa-times"></i> -->
+    </label>
+
+    <nav id="sidebar">
+        <!-- <div class="title"><img src=imge/logo_02.gif></div> -->
+        <button onclick="openClose()" id="btn-list-items" type="button" class="btn btn-info">개인정보 열기</button>
+        <ul class="list-items" id="list-items" style="display:none">
+            <!-- 입력창을 어떻게해줘야 db 넣기가 편한지 모름.. -->
+            <li>
+              <button id="login_btn" onclick="sign_out()" style="width: max-content; margin: 1px;">로그아웃</button>
+            </li>
+            <li>{{username}} /나이 : {{userage}}세</li>
+            <li>관할 구청 : {{location}}</li>
+            <li>보호자 : {{protectorname}} {{Category}}</li>
+            <!-- <li>내가 봤던 페이지 확인</li>
+            <div id="nav_search_box">
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+                <a href="#">검색기록/길이확인중</a><br>
+            </div> -->
+        </ul>
+        <div id="nav-mainbtn">
+            <button onClick="fnMove('1')" class="btn btn-outline-light">생활복지</button>
+            <button onClick="fnMove('3')" class="btn btn-outline-light">의료복지</button>
+            <button onClick="fnMove('2')" class="btn btn-outline-light">문화/여가</button>
+            <button class="btn btn-outline-light" onClick="fnMove('5')">복지지도<a class="fas fa-map-marker-alt"></a></button>
+        </div>
+    </nav>
+
+  </div>
